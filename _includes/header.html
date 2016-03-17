@@ -1,0 +1,25 @@
+<div id="header">
+  <div class="container">
+
+    <!-- Logo -->
+      <!-- Note: Be sure to update the mobile homepage link in js/init.js -->
+      <h1 id="logo"><a href="index.html">Cee Dubs</a></h1>
+
+    <!-- Nav -->
+      <nav id="nav">
+        <ul>
+          {% if {{ include.page }} == "menu" %}
+            <li class="active"><a href="menu.html">Menu</a></li>
+          {% else %}
+            <li><a href="menu.html">Menu</a></li>
+          {% endif %}
+          {% if {{ include.page }} == "contact" %}
+            <li class="break active"><a href="contact.html">Contact</a></li>
+          {% else %}
+            <li class="break"><a href="contact.html">Contact</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+
+  </div>
+</div>
