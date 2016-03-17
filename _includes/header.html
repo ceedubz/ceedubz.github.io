@@ -8,12 +8,12 @@
     <!-- Nav -->
       <nav id="nav">
         <ul>
-          {% if {{ include.page }} == "menu" %}
+          {% if include.page == "menu" %}
             <li class="active"><a href="menu.html">Menu</a></li>
           {% else %}
             <li><a href="menu.html">Menu</a></li>
           {% endif %}
-          {% if {{ include.page }} == "contact" %}
+          {% if include.page == "contact" %}
             <li class="break active"><a href="contact.html">Contact</a></li>
           {% else %}
             <li class="break"><a href="contact.html">Contact</a></li>

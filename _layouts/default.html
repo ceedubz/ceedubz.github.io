@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<!--
+	Venue by Pixelarity
+	pixelarity.com @pixelarity
+	License: pixelarity.com/license
+-->
+<html>
+	{% include head.html title=page.title %}
+	<body class="{{page.type}}">
+		{% include header.html page=page.nav %}
+
+    {% if page.type == "homepage" %}
+  		{% include banner.html %}
+  		{% include featured.html %}
+    {% endif %}
+
+		<!-- Main -->
+			<div id="main">
+				<div class="container">
+          {{page.content}}
+				</div>
+			</div>
+
+		{% include about.html %}
+		{% include footer.html %}
+	</body>
+</html>
