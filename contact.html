@@ -14,7 +14,7 @@ title: Cee Dubs - Contact
 				<header>
 					<h2>Contact</h2>
 				</header>
-				<form method="post" action="//formspree.io/justintymewheeler+test@gmail.com">
+				<form id="emailForm" method="post" action="//formspree.io/justintymewheeler+test@gmail.com">
 					<div class="row 50%">
 						<div class="6u">
 							<input type="text" name="name" id="name" placeholder="Name" />
@@ -34,10 +34,10 @@ title: Cee Dubs - Contact
 							<input type="text" name="_gotcha" style="display:none" />
 						</div>
 					</div>
-					<div class="row 50%">w
+					<div class="row 50%">
 						<div class="12u">
-							<a href="#" class="button">Send Message</a>
-							<a href="#" class="button alt">Clear Form</a>
+							<a href="#" class="button" onclick="$('#emailForm').submit()">Send Message</a>
+							<a href="#" class="button alt" onclick="$(this).closest('form').find("input[type=text], textarea").val("");">Clear Form</a>
 						</div>
 					</div>
 				</form>
