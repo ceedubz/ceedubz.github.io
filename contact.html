@@ -6,7 +6,16 @@ title: Cee Dubs - Contact
 ---
 
 <div class="row">
-
+	<script>
+		function sendEmail(){
+			$.ajax({
+	    		url: "//formspree.io/justintymewheeler+test@gmail.com",
+			    method: "POST",
+			    data: {message: $('#message').val(), _replyTo: $('#email').val(), name: $('#name').val(), subject: $('#subject').val()},
+			    dataType: "json"
+			});
+		}
+	</script>
 	<!-- Content -->
 		<div id="content" class="8u">
 			<section class="12u">
@@ -25,7 +34,7 @@ title: Cee Dubs - Contact
 					</div>
 					<div class="row 50%">
 						<div class="12u">
-							<input type="text" name="subject" id="_subject" placeholder="Subject" />
+							<input type="text" name="_subject" id="subject" placeholder="Subject" />
 						</div>
 					</div>
 					<div class="row 50%">
@@ -36,7 +45,7 @@ title: Cee Dubs - Contact
 					</div>
 					<div class="row 50%">
 						<div class="12u">
-							<a href="#" class="button" onclick="$('#emailForm').submit()">Send Message</a>
+							<a href="#" class="button" onclick="sendEmail()">Send Message</a>
 							<a href="#" class="button alt" onclick="$(this).closest('form').find("input[type=text], textarea").val("");">Clear Form</a>
 						</div>
 					</div>
@@ -68,5 +77,4 @@ title: Cee Dubs - Contact
 				</ul>
 			</section>
 		</div>
-
 </div>
